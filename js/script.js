@@ -12,13 +12,6 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-document.querySelectorAll(".slidesContainer").forEach(slidesContainer =>
-    slidesContainer.addEventListener("wheel", (evt) => {
-        evt.preventDefault();
-        slidesContainer.scrollLeft += evt.deltaY;
-    }))
-
-
 function resize() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -26,3 +19,4 @@ function resize() {
 
 window.addEventListener('resize', resize);
 window.addEventListener('load', resize);
+
